@@ -1,0 +1,64 @@
+Clearly answer five questions:
+
+1. How many duplicates existed?
+2. Which columns did you use to find duplicates?
+3. Why did you choose those columns?
+4. How many rows were removed?
+5. Did this decision make sense for the analysis?
+
+
+1️⃣ How many duplicates existed?
+
+This shows how serious the issue was.
+
+Example:
+Total rows in a dataset: 65,457
+Duplicate rows (based on chosen columns): 64,896
+
+2️⃣ Which columns used?
+
+This shows your definition of “duplicate”.
+
+Example: Three columns were used
+
+MainBranch
+Employment
+RemoteWork
+
+3️⃣ Why you chose those columns
+
+They represent core respondent characteristics
+They describe role and work style
+
+Repeated combinations indicate similar response patterns
+
+4️⃣ How many rows were removed
+
+This shows the impact of cleaning.
+
+Example:
+Rows before: 65,457
+Duplicate rows (based on chosen columns): 64,896
+
+Left-out rows: rows after keeping unique combinations: ~561
+
+5️⃣ Why this approach is valid
+
+You are not saying:
+“These are duplicate people”
+
+You are saying:
+“These are repeated patterns”
+
+✅ Final Summary:
+
+Documentation – Duplicate Handling
+
+The original dataset contained 65,457 survey responses.
+Duplicate entries were identified using the Pandas duplicated() method.
+Duplicates were defined based on the combination of MainBranch, Employment, and RemoteWork, as these columns represent key respondent characteristics related to professional role and work style.
+
+Using this definition, 64,896 rows were identified as repeated patterns, leaving approximately 561 unique combinations.
+This approach was intentionally used to analyze behavioral patterns rather than individual respondents.
+
+The original dataset was preserved to maintain data integrity, and duplicate removal was performed on a separate copy to support transparent and reproducible analysis.
